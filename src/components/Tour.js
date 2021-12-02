@@ -1,20 +1,14 @@
-import React from 'react'
-
-const Tour = ({contents, settour, tour}) => {
+const Tour = ({contents, settour, tour, refreshPage}) => {
   return (
     <>
       <h2 className="title">Our Tours</h2>
       <div className="underline"></div>
       {contents.map((content) =>{
         const {id, image, name, price, info} = content;
-
         const deleteTour = (id) =>{
-          settour(tour.filter((tour) => tour.id !== id))
-        }
-
-
+              settour(tour.filter((tour) => tour.id !== id))
+        } 
         return(
-          <>
           <section key={id}>
             <main>
               <div className="single-tour">
@@ -30,17 +24,12 @@ const Tour = ({contents, settour, tour}) => {
                 </footer>        
               </div>  
             </main> 
-          </section>  
-          </>
-
+          </section>
         )
       })
-      }
-           
+      }       
     </>
-  )
+  ) 
 }
 
 export default Tour
-
-
