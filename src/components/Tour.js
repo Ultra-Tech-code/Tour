@@ -1,18 +1,12 @@
-import React from 'react'
-
-const Tour = ({contents, settour, tour}) => {
+const Tour = ({contents, settour, tour, refreshPage}) => {
   return (
     <>
       {contents.map((content) =>{
         const {id, image, name, price, info} = content;
-
         const deleteTour = (id) =>{
-          settour(tour.filter((tour) => tour.id !== id))
-        }
-
-
+              settour(tour.filter((tour) => tour.id !== id))
+        } 
         return(
-          <>
           <section key={id}>
             <main>
               <h5 className="title underline">Our Tour</h5>
@@ -23,21 +17,16 @@ const Tour = ({contents, settour, tour}) => {
                 <p className="tour-price">{price}</p>
               </div>
               <footer> {info} 
-              <button className="delete-btn" onClick={() => deleteTour(id)}>Not interested</button> 
+              <button className="delete-btn" onClick={() => deleteTour(id)}> Not interested</button> 
               </footer>        
               </div>  
             </main> 
-          </section>  
-          </>
-
+          </section>
         )
       })
-      }
-           
+      }       
     </>
-  )
+  ) 
 }
 
 export default Tour
-
-
