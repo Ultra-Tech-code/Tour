@@ -16,7 +16,7 @@ const Tour = ({contents, settour, tour, refreshPage}) => {
                 <div className="tour-info">
                   <h4>{name}</h4>
                   <b>
-                    <p className="tour-price">${price}</p>
+                    <p className="tour-price">{price}</p>
                   </b>
                 </div>
                 <footer> {info} 
