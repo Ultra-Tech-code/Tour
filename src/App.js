@@ -40,7 +40,6 @@ function App() {
   return (
     <div className="App">
       {(<Tour  contents={tour} settour={setTour} tour={tour}/>)}
-   
     </div>
   );
 

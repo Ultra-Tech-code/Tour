@@ -1,6 +1,8 @@
 const Tour = ({contents, settour, tour, refreshPage}) => {
   return (
     <>
+      <h2 className="title">Our Tours</h2>
+      <div className="underline"></div>
       {contents.map((content) =>{
         const {id, image, name, price, info} = content;
         const deleteTour = (id) =>{
@@ -9,16 +11,17 @@ const Tour = ({contents, settour, tour, refreshPage}) => {
         return(
           <section key={id}>
             <main>
-              <h5 className="title underline">Our Tour</h5>
               <div className="single-tour">
-              <img src={image} alt="tour_img" />
-              <div className="tour-info">
-                <h4>{name}</h4>
-                <p className="tour-price">{price}</p>
-              </div>
-              <footer> {info} 
-              <button className="delete-btn" onClick={() => deleteTour(id)}> Not interested</button> 
-              </footer>        
+                <img src={image} alt="tour_img" />
+                <div className="tour-info">
+                  <h4>{name}</h4>
+                  <b>
+                    <p className="tour-price">${price}</p>
+                  </b>
+                </div>
+                <footer> {info} 
+                  <button className="delete-btn" onClick={() => deleteTour(id)}>Not interested</button> 
+                </footer>        
               </div>  
             </main> 
           </section>
