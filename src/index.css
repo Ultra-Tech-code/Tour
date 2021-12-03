@@ -154,14 +154,15 @@ Tours
 main {
   width: 90vw;
   max-width: var(--fixed-width);
-  margin: 5rem auto;
+  margin: 4rem auto 5rem;
 }
 .loading {
+  margin-top: 5%;
   text-align: center;
 }
 .title {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 .underline {
   width: 6rem;
@@ -174,7 +175,7 @@ main {
 .single-tour {
   background: var(--clr-white);
   border-radius: var(--radius);
-  margin: 2rem 0;
+  margin: 1rem 0 2rem;
   box-shadow: var(--light-shadow);
   transition: var(--transition);
 }
@@ -192,10 +193,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
-}
-.tour-info h4 {
-  margin-bottom: 0;
+  padding: 1rem 2rem 0;
 }
 .single-tour button {
   background: transparent;
@@ -212,9 +210,11 @@ main {
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
 }
+
 .single-tour footer {
-  padding: 1.5rem 2rem;
+  padding: 0rem 2rem 1.5rem;
 }
+
 .single-tour .delete-btn {
   display: block;
   width: 200px;
@@ -222,8 +222,13 @@ main {
   color: var(--clr-red-dark);
   letter-spacing: var(--spacing);
   background: transparent;
-  border: 1px solid var(--clr-red-dark);
+  border: 2px solid var(--clr-red-dark);
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
+  font-weight: 600;
 }
 
+.delete-btn:hover {
+  color: #fff;
+  background: var(--clr-red-dark);
+}
