@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 //import Loading from './components/Loading';
 import Tour from './components/Tour';
-// import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
 const url = 'https://course-api.com/react-tours-project';
 
